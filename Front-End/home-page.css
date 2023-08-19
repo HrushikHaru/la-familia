@@ -1,0 +1,706 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: hsl(252, 30%, 95%);
+  font-size: 2rem;
+}
+
+/*To make the feeds 100% when nothing is posted (IMP)*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+/*Till here*/
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.pre-loader {
+  width: 100%;
+  height: 100vh;
+  background: #fff url("content-images/pre-loader.gif") no-repeat center;
+  display: none;
+
+  transition: all 0.5s;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 6rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  font-size: 2rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+}
+
+/*Nav*/
+nav {
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .search-bar {
+  background: hsl(252, 30%, 95%);
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  border: none;
+}
+
+.search {
+  border: none;
+}
+
+nav .search-bar input[type="search"] {
+  background: transparent;
+  width: 30vw;
+  outline: none;
+}
+
+.switch-between {
+  display: flex;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 50%;
+}
+
+nav .create {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-profile-details {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.top {
+  cursor: pointer;
+}
+
+.logout-link {
+  cursor: pointer;
+}
+
+@media (max-width: 740px) {
+  nav .search-bar input[type="search"] {
+    background: transparent;
+    width: 20vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 2rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 1.3rem;
+  }
+}
+
+/*Main*/
+main {
+  position: relative;
+  top: 8rem;
+  height: 100%;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
+
+/*left*/
+main .container .left {
+  height: max-content;
+  position: sticky;
+  top: 9rem;
+}
+
+main .container .left .profile {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  /* width: 100%; */
+}
+
+.container .left .user-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.location {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.locationUser {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.location::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 65px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.hobbies {
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.hobbiesUser,
+.bioUser {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.hobbies::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 50px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.bio {
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.bio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.left .sidebar {
+  margin-top: 1rem;
+  background: white;
+  border-radius: 1rem;
+  display: none;
+}
+
+.left .sidebar .menu-item {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  cursor: pointer;
+  translate: all 300ms ease;
+  position: relative;
+}
+
+.btn-side {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.left .sidebar .menu-item:hover {
+  background-color: hsl(252, 30%, 95%);
+}
+
+.like-post {
+  cursor: pointer;
+  color: grey;
+}
+
+.change-red {
+  color: red;
+}
+
+/*Feeds*/
+.middle .feeds .feed,
+.middle .public-feeds .feed {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.middle .feed .head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.middle .feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.middle .feed .photo {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1rem 1rem;
+}
+
+.middle .feed .action-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.middle .liked-by {
+  display: flex;
+}
+
+.middle .liked-by span {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  margin-left: -0.6rem;
+}
+
+.middle .liked-by img {
+  height: 100%;
+}
+
+.middle .liked-by span:first-child {
+  margin: 0;
+}
+
+main .container .right {
+  height: max-content;
+  position: sticky;
+  top: 9rem;
+  bottom: 0;
+}
+
+.right .friend-requests h4 {
+  color: hsl(252, 30%, 95%);
+  margin: 1rem;
+}
+
+.right .request {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.followList {
+  margin-top: 1rem;
+}
+
+.requests,
+.follow {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h4 {
+  color: black;
+}
+
+.right .request .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.right .request .action {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-menu {
+  display: none;
+}
+
+.request-slider {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 96%;
+  }
+
+  main .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+
+  .left {
+    width: 5rem;
+    z-index: 5;
+  }
+  /* main .container .left .profile {
+    display: none;
+  }
+
+  main .container .left .user-info {
+    display: none;
+  } */
+
+  .user-bio-show {
+    position: relative;
+  }
+
+  main .user-bio {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 1rem;
+    top: 0;
+    left: 100%;
+  }
+
+  .left .sidebar {
+    display: block;
+  }
+
+  main .user-bio main .left .sidebar {
+    display: block;
+  }
+
+  .sidebar h3 {
+    display: none;
+  }
+
+  .menu-item a {
+    display: block;
+    width: 100%;
+    text-align: centers;
+  }
+
+  .menu-item h3 {
+    display: none;
+  }
+
+  .left .btn {
+    display: none;
+  }
+
+  .menu-item span {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  main .container {
+    grid-template-columns: 5rem auto 5rem;
+    gap: 1rem;
+  }
+
+  .btn-menu {
+    display: block;
+    margin-top: 1rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  main .container .right {
+    top: 50%;
+  }
+
+  .btn-menu:hover {
+    background-color: hsl(252, 30%, 95%);
+  }
+
+  .request-slider {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -600%;
+    width: 30rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  main .user-bio {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 1rem;
+    top: 0;
+    left: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main .container {
+    grid-template-columns: 3rem auto 3rem;
+    gap: 1rem;
+  }
+
+  .sidebar {
+    width: 3rem;
+  }
+
+  .menu-item span {
+    margin-left: 0.5rem;
+  }
+
+  nav .search-bar input[type="search"] {
+    max-width: 7rem;
+  }
+
+  .btn-menu {
+    display: block;
+    margin-top: 1rem;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+
+  .btn-menu:hover {
+    background-color: hsl(252, 30%, 95%);
+  }
+
+  .request-slider {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -1000%;
+    width: 30rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+}
+
+/*Swiper*/
+.slider {
+  max-width: 30rem;
+  height: 20rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20rem;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 10%;
+  transform: translate(50%, -50%);
+}
+
+.swiper {
+  width: 30rem;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.handle-name,
+.people-name {
+  font-size: 1.5rem;
+}
+
+/*Modal Window*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  backdrop-filter: blur(4px);
+
+  transition: all 1s;
+}
+
+.modal {
+  width: 70%;
+  background-color: #1e2328;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 100;
+  font-size: 25px;
+}
+
+.err-desc {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid black;
+}
+
+/*For public Feeds*/
+.hidden {
+  display: none;
+}

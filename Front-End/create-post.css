@@ -1,0 +1,308 @@
+.create-post,
+.add-comments {
+  position: fixed;
+  max-height: 80rem;
+  width: 80rem;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.name-of-user {
+  font-weight: 700;
+}
+
+.uil-times {
+  cursor: pointer;
+}
+
+.create-post-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.user-details-content {
+  display: none;
+  padding: 1rem;
+}
+
+textarea {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  display: block;
+}
+
+.error-caption-msg {
+  margin-top: 1rem;
+  color: red;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ingo small {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.dateTimeShow {
+  margin-left: 0.5rem;
+}
+
+.add-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-show {
+  margin-left: 1.5rem;
+  padding: 1rem;
+}
+
+.user-profile-photo {
+  position: relative;
+}
+
+.profile-options {
+  display: none;
+  position: absolute;
+  top: 90%;
+  right: 9.85%;
+  background-color: #0b0b0b;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .profile-options {
+    right: 1.8%;
+  }
+}
+
+.user-profile:hover .profile-options {
+  display: block;
+}
+
+.dashboard-link,
+.logout-link {
+  display: block;
+  margin-bottom: 5px;
+  color: #fefcfc;
+  text-decoration: none;
+}
+
+.dashboard-link:hover,
+.logout-link:hover {
+  color: #d8d5d5;
+}
+
+.post-img-container {
+  padding: 1rem;
+  /* height: 85%; */
+  height: 40rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.caption-from-post {
+  font-size: 1.5rem;
+}
+
+.caption-by {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.caption-divider {
+  display: flex;
+  gap: 1rem;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-comments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.title-comments {
+  font-weight: 800;
+}
+
+.post-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-for-post {
+  cursor: pointer;
+}
+
+.comments-by-users {
+  background: hsl(252, 30%, 95%);
+  border-radius: 1rem;
+  height: 30rem;
+  width: 100%;
+  overflow-y: scroll;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment-input {
+  background: hsl(252, 30%, 95%);
+  width: 93%;
+  height: 3rem;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.comment-by-user-pfp {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.postComment {
+  color: lightgray;
+}
+
+.each-comment {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.commenter-name {
+  font-weight: 800;
+}
+
+.comment-info {
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 25rem;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.uploadBtn {
+  background-color: black;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.add-post {
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: #fff;
+  border-radius: 20rem;
+  cursor: pointer;
+}
+
+.postByFollowing {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 850px) {
+  .create-post {
+    width: 60rem;
+  }
+
+  .create-post-content {
+    grid-template-columns: 60fr 40fr;
+  }
+
+  textarea {
+    columns: 30;
+  }
+
+  .add-comments {
+    width: 70rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .add-comments {
+    grid-template-columns: 1fr;
+    width: 40rem;
+  }
+
+  .post-img-container {
+    height: 30rem;
+  }
+
+  .comment-section {
+    height: 30rem;
+  }
+
+  .comment-input {
+    width: 33rem;
+  }
+}
+
+@media screen and (max-width: 645px) {
+  .create-post {
+    width: 40rem;
+  }
+
+  .create-post-content {
+    grid-template-columns: 1fr;
+  }
+
+  .post-img-container {
+    height: 30rem;
+  }
+}

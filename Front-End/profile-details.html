@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link href="home-page.css" rel="stylesheet" />
+    <link href="profile-details.css" rel="stylesheet" />
+    <script src="profile-details.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pre-loader"></div>
+    <nav>
+      <div class="container">
+        <h1>La Familia</h1>
+        <div class="search-bar">
+          <i class="uil uil-search"></i>
+          <input
+            type="search"
+            placeholder="search for friends.."
+            class="search"
+          />
+        </div>
+        <div class="create">
+          <label class="profile-page" for="create-post">Profile</label>
+          <div class="profile-photo">
+            <img
+              src="content-images/dummy-profile-pic.webp"
+              alt="profile-pic"
+              class="user-profile-pic-stable"
+            />
+          </div>
+          <div class="profile-options" id="profileOptions">
+            <a href="index.html" class="logout-link">Log out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container profile-grid">
+      <div class="left">
+        <a class="home-button" href="home-page.html">
+          <i class="uil uil-home"></i>
+          <h3>Home</h3>
+        </a>
+      </div>
+      <div class="whole-profile">
+        <div class="profile-content-details">
+          <div class="profile-photo max">
+            <img
+              src="content-images/dummy-profile-pic.webp"
+              class="user-profile-pic"
+            />
+          </div>
+          <div class="profile-content">
+            <p class="user-name">Harunosuke</p>
+            <p class="handle-name">@harunosuke</p>
+            <div class="location-hobbies">
+              <span class="location-user">India</span>
+              <div class="vertical-line"></div>
+              <span class="hobbies-user">Swimming, diving</span>
+            </div>
+            <p class="bio-user">I'm awesome</p>
+            <div class="follow-list">
+              <div>
+                <p class="details-report">Posts</p>
+                <span class="post-count">4</span>
+              </div>
+              <div>
+                <p class="details-report">Following</p>
+                <span class="following-count">4</span>
+              </div>
+              <div>
+                <p class="details-report">Followers</p>
+                <span class="followers-count">4</span>
+              </div>
+            </div>
+            <a href="user-profile-change.html"
+              ><button class="btn btn-primary edit-profile">
+                Edit Profile
+              </button></a
+            >
+            <button class="btn btn-primary" id="followBtn">Follow</button>
+          </div>
+        </div>
+        <div class="rest-content">
+          <div class="users-posts">
+            <!-- <div class="each-post">
+              <img src="content-images/dummy-profile-pic.webp" />
+              <div class="post-data">
+                <div class="metrics">
+                  <span
+                    ><i class="uil uil-comment-dots"></i><span>5</span></span
+                  >
+                  <span><i class="uil uil-heart"></i><span>5</span></span>
+                </div>
+                <p class="caption">
+                  Caption Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Ea aut architecto nam consequuntur hic deleniti rerum
+                  temporibus
+                </p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

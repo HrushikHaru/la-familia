@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link href="user-profile.css" rel="stylesheet" />
+    <title>Document</title>
+    <script defer src="user-profile.js"></script>
+  </head>
+  <body>
+    <div class="pre-loader"></div>
+    <form class="profile-form">
+      <h1 class="elcome">Welcome to Your profile!</h1>
+      <p class="started">Change your profile pic here</p>
+      <div class="profile-pic">
+        <img
+          src="content-images/dummy-profile-pic.webp"
+          alt="Profile Picture"
+          id="profile-image"
+        />
+        <label>Change Your profile pic!</label>
+        <input type="file" accept="image/*" id="profile-image-upload" />
+      </div>
+      <label for="display-name">Display Name:</label>
+      <input
+        type="text"
+        id="display-name"
+        name="display-name"
+        class="displayName"
+      />
+
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" rows="4" class="bio"></textarea>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" class="location" />
+
+      <label for="hobbies">Hobbies:</label>
+      <textarea id="hobbies" name="hobbies" rows="4" class="hobbies"></textarea>
+
+      <button type="submit">Save</button>
+    </form>
+
+    <section class="modal hidden">
+      <div class="err-desc">
+        <img src="content-images/error.webp" />
+        <p class="validation">Validation Error</p>
+        <button class="modalClose">&times;</button>
+      </div>
+      <div>
+        <p class="validation-desc">Error message</p>
+      </div>
+    </section>
+
+    <div class="overlay hidden"></div>
+  </body>
+</html>
